@@ -33,9 +33,9 @@ it finishes, run this program again to continue."
 fi
 sleep 2
 
-echo " -----------------------------------------------------------------------"
-echo " -- Git Installation Complete ------------------------------------------"
-echo " -----------------------------------------------------------------------"
+echo "--------------------------------------------------------------------------"
+echo "-- Git Installation Complete ---------------------------------------------"
+echo "--------------------------------------------------------------------------"
 sleep 2
 echo
 
@@ -43,9 +43,9 @@ echo "Next, we should make sure you have a GitHub account.
 If you don't, you'd better head over to https://github.com and register an account!"
 read -p "Just hit the [ENTER] key when you're ready to continue."
 
-echo " -----------------------------------------------------------------------"
-echo " -- GitHub Account Creation Complete -----------------------------------"
-echo " -----------------------------------------------------------------------"
+echo "--------------------------------------------------------------------------"
+echo "-- GitHub Account Creation Complete --------------------------------------"
+echo "--------------------------------------------------------------------------"
 echo; sleep 2
 
 echo "Our final step is to ensure that GitHub can recognize your computer. We want to make
@@ -67,9 +67,9 @@ else
 fi
 sleep 1
 
-echo " -----------------------------------------------------------------------"
-echo " -- SSH Key Generation Complete ----------------------------------------"
-echo " -----------------------------------------------------------------------"
+echo "--------------------------------------------------------------------------"
+echo "-- SSH Key Generation Complete -------------------------------------------"
+echo "--------------------------------------------------------------------------"
 echo; sleep 2
 
 echo
@@ -139,15 +139,15 @@ else
     exit
 fi
 
-echo " -----------------------------------------------------------------------"
-echo " -- GitHub SSH Key Verification Complete -------------------------------"
-echo " -----------------------------------------------------------------------"
+echo "--------------------------------------------------------------------------"
+echo "-- GitHub SSH Key Verification Complete ----------------------------------"
+echo "--------------------------------------------------------------------------"
 
 echo; sleep 1
 echo "Cleaning up and running final checks..."
 # assert that the user can connect to GitHub and authenticate
 sleep 2
-if [[ "$(ssh -T git@github.com 2>&1)" == *"Hi $uniqname! You've successfully authenticated, but GitHub does not provide shell access."* ]]
+if [[ "$(ssh -T git@github.com 2>&1)" == *"Hi $uname! You've successfully authenticated, but GitHub does not provide shell access."* ]]
 then
     echo "Congratulations! You're ready to use GitHub from your computer."
 else
