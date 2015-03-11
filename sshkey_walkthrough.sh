@@ -147,7 +147,7 @@ echo; sleep 1
 echo "Cleaning up and running final checks..."
 # assert that the user can connect to GitHub and authenticate
 sleep 2
-if [[ "$(ssh -T git@github.com 2>&1)" == *"Hi $uname! You've successfully authenticated, but GitHub does not provide shell access."* ]]
+if [[ "$(ssh -T git@github.com 2>&1)" == *"successfully authenticated"* ]]
 then
     echo "Congratulations! You're ready to use GitHub from your computer."
 else
